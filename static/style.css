@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.navie {
+    background: linear-gradient(45deg, rgb(234, 250, 255), rgb(165, 219, 237));
+    /* font-weight: bold; */
+    /* border-bottom: 1px solid black; */
+}
+.navie img {
+    margin-left: 10%;
+    margin-right: 4px;
+    width: 70px;
+}
+.navie h5{
+    color: rgb(211, 0, 0);
+    display: inline;
+    margin: 4px;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.dmrc {
+    margin-right: 10%;
+    padding: 14px;
+    color: rgb(69, 69, 69);
+    border: 1px solid rgb(69, 69, 69);
+    border-radius: 10px;
+    background: white;
+}
+
+.dmrc .col {
+    border-left: 1px solid rgb(69, 69, 69);
+    border-right: 1px solid rgb(69, 69, 69);
+}
+
+.green {
+    background: green;
+    color: white;
+    text-align: center;
+}
+
+
+.naviee {
+    background: rgb(234, 250, 255);
+    box-shadow: 0px 3px 10px rgb(187, 187, 187);
+}
+
+.box-1{
+    /* position: fixed; */
+    background-color: #c7edfe;
+    /* background-image: url("https://cdn-icons-png.flaticon.com/512/1034/1034897.png");
+    opacity: 0.2;
+    background-size: cover; */background-repeat: no-repeat;
+    background-size: 200px 300px;
+    max-height: 600px;
+    
+    margin: 40px 10px;
+    padding: 20px 20px 20px 30px;
+    border-radius: 10px;
+    text-align: left;
+    
+}
+/* .box-1 img{
+    display: inline;
+    margin-bottom: 8px;
+} */
+.box-1 h5 {
+    display: inline-block;
+    margin: 10px;
+    
+}
+.box1,.col-6{
+    padding-left: 25px;
+}
+
+.form-group label {
+    color: rgb(211, 0, 0);
+}
+
+.box-2{
+    margin: 40px 10px;
+    width: 500px;
+    background-color: white;
+    /* border: 1px solid black; */
+}
+.box-2 img {
+    /* margin-top: 200px; */
+    /* height: 100%; */
+    max-width: 100%;
+    margin: 20px 10px;
+    display: flex;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgb(187, 187, 187);
+}
+.box-3 {
+    padding: 25px;
+    padding-top: 10px;
+    width: 100%;
+    height: 280px;
+    /* display: flex; */
+    margin: auto;
+    margin: 20px 10px;
+    background: rgb(255, 239, 241);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 195, 205);
+}
+.ululu {
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+.box-3 p {
+    margin-left: 10%;
+    color: rgb(93, 93, 93);
+}
+.box-3 h5 {
+    margin-bottom: 0;
+    margin-left: 10%;
+    font-weight: 700;
+}
+
+.tableBox {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.mapicon {
+    opacity: 70%;
+}
+.mapicon:hover {
+    opacity: 100%;
+}
+.mapimg{
+    border-radius: 10px;
+    width: 50%;
+    height: 150px;
+}
+
+.mapimg:hover{
+    margin-top: -3px;
+    box-shadow: 7px 7px 10px rgb(187, 187, 187);
+    cursor: pointer;
+}
+
+.cards {
+    position: absolute;
+      display: none;
+  /* background-color: #f9f9f9; */
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.card {
+
+    width: 250px;
+    height: 25px;
+    border: 1px solid black;
+    /* position: absolute; */
+    opacity: 0.8;
+}
+
+.from:hover .cards {
+    display: block;
+}
+
+.w-10{
+    width: 2rem;
+}
+.form-control{
+    max-width:400px;;
+}
+/* .img{
+    display: inline-block;
+    padding-bottom: 500px;;
+} */
+
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+/* IMAGE STYLES */
+[type=radio] + i {
+    cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + i{
+    outline: 2px solid #f00;
+    color: rgb(211, 0, 0);
+    /* background-color: blue; */
+  }
+  .search-station,.nearest-station{
+    margin-top: 100px;;
+    margin: 20px;
+    font-size: 4em;
+    text-align: right;
+  }
+  .search-station-box,.nearest-station-box{
+    display: inline-block;
+  }
+  .search-station-box p, .nearest-station-box p{
+   margin-top:10px;
+}
+.search-station-button,.nearest-station-button{
+    border: solid 3px black;
+    border-radius: 10px;
+    width: 110px;
+    margin-top: 50px;
+}
+.footer{
+    width:200%;
+}
+
+.hide {
+    display: none;
+}
+
+.station-name {
+    display: flex;
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+    background: url(/static/icons/delhi\ metro.jfif);
+    text-align: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-size: 15px;
+    color: white;
+    padding: 52px 0px;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+@media only screen and (max-width: 800px){
+    .mapicon {
+        opacity: 0;
+    }
+    .mapicon:hover {
+        opacity: 0;
+    }
+}
+@media only screen and (max-width: 560px){
+    .mapicon {
+        opacity: 0.7;
+    }
+    .dmrc {
+        display: none;
+    }
+}
+ul {
+    list-style: none;
+  }
+  ul li::before {
+    content: "•";
+    color: red;
+    font-weight: bold;
+    display: inline-block;
+    width: 15px;
+  }

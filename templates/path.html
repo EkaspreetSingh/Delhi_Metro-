@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    
+
+<div class="box-2 col-sm" style="min-width: 550px;">
+        <h2>Path : </h2>
+        <link rel="stylesheet" href="/static/style_route.css">
+            <div class="containerx">
+            <h4 style="box-shadow: 0px 3px 10px rgb(187, 187, 187); margin-bottom:10%; text-align: center;">Transportation line </h4>
+            
+
+            <ul style="{{syle}}" class="line line--m2"  >
+
+
+                <li class="station station--start"><strong>{{dict['path'][0]}}</strong></li>
+                {% for i in range(1, dict['path']|length -1 ) %}
+                    <li class="station station--default" >{{dict['path'][i]}} </li>
+                {% endfor %}
+
+                
+                <li class="station station--end"><strong>{{ dict['path'][dict['path']|length -1]}} </strong></li>
+            </ul>
+    </div>
+  </div>
+
+{{ destination }}
+
+{% endblock %}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Route display</title>
+    <link rel="stylesheet" href="/static/style_route.css">
+  </head>
+  <body>
+
+  
+
+<div class="container">
+  {{dict}}
+  <h1 >Transportation line</h1>
+  
+
+  <ul class="line line--m2" style="{{syle}}">
+
+
+    <li class="station station--start"><strong>{{dict['path'][0]}}</strong></li>
+      {% for i in range(1, dict['path']|length -1 ) %}
+
+        <li class="station station--default" >{{dict['path'][i]}} </li>
+        
+      {% endfor %}
+
+    
+    <li class="station station--end"><strong>{{ dict['path'][dict['path']|length -1]}} </strong></li>
+  </ul>
+  
+</body>
+</html>
+
+
