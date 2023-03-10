@@ -3,12 +3,10 @@
 
 
 {% block body%}
-<div class="box-2 col  tableBox">
-    <div>
+<div class="box-2 col-sm">
+    <div class="">
         <h5 id="station" class="station-name"> </h5>
 
-
-        <!-- table -->
         <table class="table">
           <tbody>
             <tr>
@@ -77,11 +75,9 @@
 
         </div>
     </div>
-</div>
-  
+
 
     <div id="map" style="height: 500px; width: 100%; margin-bottom: 50px; border-radius:20px;"></div>
- 
   {% endblock %}
 
 
@@ -90,7 +86,6 @@
 <script>
   const template1 = document.querySelector("[template1]")
   const lines = document.querySelector("[lines]")
-  
   const template2 = document.querySelector("[template2]")
   const layots = document.querySelector("[layots]")
 
@@ -99,7 +94,8 @@
 
 
   function initMap(longitude, latitude) {
-    let myLatLng = {lat: latitude, lng: longitude};
+    let myLatLng = {lat: 28.640431, lng: 77.104905};
+    // let myLatLng = {lat: latitude, lng: longitude};
 
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 18,
@@ -115,8 +111,10 @@
 
   let longitude, latitude;
   navigator.geolocation.getCurrentPosition(function(position) {
-      longitude = position.coords.longitude;
-      latitude = position.coords.latitude;
+    //  longitude = position.coords.longitude;
+    //  latitude = position.coords.latitude;
+     longitude = 77.104905
+     latitude =  28.640431
 
       // calculation of nearest metro station
       fetch('/static/data.json')
@@ -148,8 +146,6 @@
                     if(element.details['disabled friendly'] ==  0){
                      parking = "No";
                    }
-                    
-                 
               }
           })
       initMap(anslo, ansla);
@@ -160,8 +156,7 @@
       document.querySelector("#station-elivator").innerHTML = elivator;
       document.querySelector("#station-disabled").innerHTML = disabledFriendly;
 
-    
-          
+
       stationLine.forEach(element =>{
         const myArray = element.split(" ");
         let color = myArray[0];
@@ -186,8 +181,6 @@
         text.textContent = element
         platforms.append(card);
       })
-      
-      
 
       })
   });
