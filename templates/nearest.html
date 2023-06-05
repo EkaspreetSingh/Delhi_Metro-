@@ -111,10 +111,8 @@
 
   let longitude, latitude;
   navigator.geolocation.getCurrentPosition(function(position) {
-    //  longitude = position.coords.longitude;
-    //  latitude = position.coords.latitude;
-     longitude = 77.104905
-     latitude =  28.640431
+     longitude = position.coords.longitude;
+     latitude = position.coords.latitude;
 
       // calculation of nearest metro station
       fetch('/static/data.json')
